@@ -1,0 +1,435 @@
+*{
+				box-sizing: border-box;
+}
+
+body{
+				margin: 0;
+}
+/* navber starts */
+
+h1{
+				font-size: 2.5rem;
+				text-align: center;
+}
+
+h2{
+				font-size: 2.4rem;
+				text-align: center;
+}
+
+a{
+				color: white;
+				font-size: 1.2rem;
+				text-decoration: none;
+				margin: 55px;
+				margin-top: 20px;
+}
+
+p{
+				font-size: 1.2rem;
+				text-align: justify;
+}
+
+.dotted-hr{
+				border: dotted 6px white;
+				border-bottom: none;
+				margin:20px auto;
+				width: 90px;
+}
+
+[class*="col-"]{
+				float: left;
+				padding: 10px;
+}
+
+/* for mobile */
+[class*="col-"]{
+				width: 100%;
+}
+
+.navber{
+				background-color: #40868b;
+				padding:1% 7% ;
+				text-align: center;
+}
+
+.navber h1{
+				color: white;
+				margin: 0;
+				padding-top: 10px;
+}
+
+.navber-menu{
+				display: flex;
+				flex-derection: column;
+				text-trensfrom: uppercase;
+}
+
+.navber-menu a{
+				background-color: #0c6168;
+				border-radius: 10px;
+				margine: 7px 0px;
+				padding: 10px;
+}
+
+.navber-menu a:hover{
+				background-color: gray;
+}
+
+.navber::after{
+				content:' ';
+				display: table;
+				clear: both;
+				
+}
+/* navber ends */
+
+
+/* profile starts */
+.profile{
+				padding:130px 10px ;
+				text-align: center;
+}
+
+.profile-desc h1{
+				font-family: 'satisfy', cursive;
+				font-size: 5rem;
+}
+
+.profile-desc p{
+				color: gray;
+				margin: 0 auto 20px auto;
+				text-align: center;
+				width: 90%;
+				font-size: 2rem;
+}
+
+button{
+				width: 200px;
+				padding: 15px 0;
+				text-align: center;
+				margin: 20px 10px;
+				border-radius: 25px;
+				font-weight: bold;
+				border: 2px solid orange;
+				background: transparent;
+				color: black;
+				cursor: pointer;
+				position: relative;
+				overflow: hidden;
+				font-size: 1.2rem;
+}
+
+span{
+				background: blue;
+				height: 100%;
+				width: 0;
+				border-radius: 25px;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				z-index: -1;
+				transition: 0.5s;
+}
+button:hover span{
+				width: 100%;
+}
+button:hover{
+				border: none;
+				
+}
+/* profile ends */
+
+
+/* about me starts */
+
+.about-me{
+				background-color: #39a4ac;
+				padding:1% 7%;
+				color: white;
+				text-align: center;
+				font-family:'montserrat', sans-serif;
+}
+
+.aboutme-image img{
+				border: 5px solid white;
+				border-radius: 50%;
+				height: 220px;
+				width: 200px;
+}
+
+.about-me p{
+				text-align: center;
+}
+
+.about-me a{
+				font-size: 1.2rem;
+}
+
+.about-me::after{
+				clear:both;
+				display: table;
+				content:' ';
+}
+
+.about-me cv-button{
+				font-size:10rem;
+}
+
+.cv-button{
+    background-color: #052d2f;
+    color: white;
+    border:none;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+}
+
+
+
+.about-me::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+
+				
+/* about me ends */
+
+/* professional experience starts */
+
+.professional-experience{
+				padding:1% 0%;
+}
+
+.professional-experience .card{
+				background-color: #a39e9e;
+				border-radius: 5px;
+				padding: 10px;
+				transition: 3s;
+				height: 430px;
+}
+
+.card:hover{
+				box-shadow: 0px 4px 8px 5px black;
+}
+
+.card-title h2{
+				background-color:#616161;
+				color: white;
+				padding: 10px;
+				text-align: center;
+}
+
+.card-desc{
+				font-size: 1.2rem;
+}
+
+.skills-container{
+				padding-right: 45px;
+				
+}
+
+
+.skills-container li{
+				list-style: none;
+				font-weight: bolder;
+				margin:30px 10px;
+				position: relative;
+				text-transfrom: uppercase;
+}
+
+.skills-container li::before{
+				content: ' ';
+				position: absolute;
+				top: calc(100% + 5px);
+				left: 0;
+				
+				width: 100%;
+				height: 10px;
+				background-color: rgb(86,86,153,.5);
+				border-radius: 1000px;
+				
+}
+
+.skills-container li::after{
+				content: ' ';
+				position: absolute;
+				top: calc(100% + 5px);
+				left: 0;
+				
+				width: 0%;
+				height: 10px;
+				background-color: rgb(86,86,153,.8);
+				border-radius: 1000px;
+				
+				animation-duration: 3s;
+				animation-delay: 2s;
+				animation-timing-function: linear;
+				animation-fill-mode: forwards;
+				animation-iteration-count: infinite;
+				
+}
+
+.skills-container li.html::after{
+				animation-name: html;
+}
+
+@keyframes html{
+				to{
+								width: 70%;
+				}
+}
+
+.skills-container li.css::after{
+				animation-name: css;
+}
+
+@keyframes css{
+				to{
+								width: 50%;
+				}
+}
+
+.skills-container li.js::after{
+				animation-name: js;
+}
+
+@keyframes js{
+				to{
+								width: 30%;
+				}
+}
+
+.skills-container li.node js::after{
+				animation-name: node js;
+}
+
+@keyframes node js{
+				to{
+								width: 20%;
+				}
+}
+
+.skills-container li.react js::after{
+				animation-name: react js;
+}
+
+@keyframes react js{
+				to{
+								width: 35%;
+				}
+}
+
+.skills-container li.php::after{
+				animation-name: php;
+}
+
+@keyframes php{
+				to{
+								width: 33%;
+				}
+}
+
+/* professional experience ends */
+
+
+/* achievement starts */
+
+.achievement-contact{
+				padding: 1% 7%;
+				background-color: #39a4ac;
+				color: white;
+}
+
+.contact{
+				text-align: center;
+}
+
+.contact input,textarea{
+				width: 100%;
+				padding: 10px;
+				font-size: 1rem;
+				text-align: center;
+				border: none;
+				border-radiuse: 5px;
+				resize: none;
+}
+
+.contact button{
+				border: none;
+				border-radius: 10px;
+				background-color: #052d2f;
+				color: white;
+				cursor: pointer;
+				padding: 15px;
+				margin: 10px;
+				width: 100px;
+}
+
+.achievement-contact::after{
+				clear: both;
+				display: table;
+				content: ' ';
+}
+/* achievement ends */
+/* footer start */
+.footer{
+				background-color: black;
+				color: white;
+				padding: 50px;
+				text-align: center;
+				font-size: 0.8rem;
+}
+
+.footer-menu a{
+    display: block;
+    margin: 15px 0;
+    font-size: 2.1rem;
+    text-decoration: none;
+    color: white;
+    margin-top:20px;
+}
+
+.footer-menu a:hover{
+    color: gray;
+ 
+}
+.footer h2{
+				font-size: 2.9rem;
+				color: #40868b;
+}
+.footer h2:hover{
+			  color:red;
+}
+
+.icon a{
+				text-align: center;
+				font-size:4.9rem;
+				color:brown;
+}
+
+
+.icon :hover{
+				color:blue;
+}
+
+
+.footer::after{
+    display: table;
+    content: '';
+    clear: both;
+}
+
+.copy{
+				font-size: 2.2rem;
+				text-align: left;
+}
+.copy:hover{
+				color:green;
+}
+
+/* footer ends */
